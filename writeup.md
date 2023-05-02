@@ -1,15 +1,41 @@
-# Writeup: Track 3D-Objects Over Time
+# Sensor Fusion and Tracking Workflow
 
-Please use this starter template to answer the following questions:
+## The Goal of this Project
 
-### 1. Write a short recap of the four tracking steps and what you implemented there (filter, track management, association, camera fusion). Which results did you achieve? Which part of the project was most difficult for you to complete, and why?
+the goal of this project is to fuse measurements from LiDAR and camera and track vehicles over time. You will be using real-world data from the Waymo Open Dataset, detect objects in 3D point clouds and apply an extended Kalman filter for sensor fusion and tracking.
+
+## The Soliving Sequance of this Project
+* Visualize range image channels
+ 
+Please locate two images from separate data sets within the Images folder that have been stacked together to display range and intensity information.
+
+* Visualze point-cloud
+ 
+Please locate examples within the Images folder that display vehicles along with their features.
+
+* BEV-map coordinates
+
+* Compute intensity layer of bev-map
+
+The settings have been modified to make the vehicles visible.
+
+* Compute height layer of bev-map
+
+* Add Second Model
+
+The fpn_resnet model has been implemented, and additional hyperparameters have been included, as specified in the test.py file.
+
+* Bounding boxes
+
+Bounding boxes have been included, but it should be noted that the x and y coordinates need to be flipped to comply with the requirements of the Bird's Eye View (BEV) format.
+
+* IOU calculate & count true positive
+* Count false negative and false positive
+* compute percision and recall
+
+## Observation
 
 
-### 2. Do you see any benefits in camera-lidar fusion compared to lidar-only tracking (in theory and in your concrete results)? 
+In this project, I applied the knowledge acquired from the lessons to extract lidar data from the Waymo dataset and generate images for the necessary channels. These images were later used in conjunction with a machine learning model to detect the surrounding environment.
 
-
-### 3. Which challenges will a sensor fusion system face in real-life scenarios? Did you see any of these challenges in the project?
-
-
-### 4. Can you think of ways to improve your tracking results in the future?
-
+Finally, I evaluated the model myself based on the data and results obtained.
